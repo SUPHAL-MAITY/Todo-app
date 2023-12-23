@@ -1,6 +1,8 @@
 import React from 'react'
 import {useSelector,useDispatch} from "react-redux"
 import {removeTodo} from  "../features/todol/todoSlice"
+import '../App.css';
+import { MdDelete } from "react-icons/md"
 
 
 
@@ -9,19 +11,23 @@ function Todos ()  {
   const dispatch=useDispatch()
   return (
     <>
-     <div> Todos</div>
+    <div className="center my-2">
+      
+     <div> <h3>Todos</h3></div>
+    
      {todos.map((todo)=>(
       <li key={todo.id}>
         {todo.text}
-        <button onClick={()=>dispatch(removeTodo(todo.id))} >
-        X</button>
+       
+      <button className="btn-tab" onClick={()=>dispatch(removeTodo(todo.id))} ><MdDelete /></button>
+        
 
 
       </li>
      ))}
 
       
-      
+</div>
       </>
     )
     

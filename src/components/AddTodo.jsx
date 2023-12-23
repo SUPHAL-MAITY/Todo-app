@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import {useDispatch} from "react-redux"
 import {addTodo} from "../features/todol/todoSlice"
+import '../App.css';
 
 
 
@@ -20,11 +21,11 @@ const addTodoHandler=(e)=>{
 }
    
   return (
-    <div>
+    <div  className='center'>
         
         <form onSubmit={addTodoHandler}>
             <div className="mb-3">
-                <label htmlFor="exampleInputEmail1" className="form-label">Enter a ToDo</label>
+                <label htmlFor="exampleInputEmail1" className="form-label"><h2>Enter Your  ToDo List</h2></label>
                 <input type="text" value={input} onChange={(e)=>setInput(e.target.value)} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                 
             </div>

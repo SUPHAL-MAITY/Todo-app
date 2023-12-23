@@ -9,8 +9,10 @@ import Todos from './components/Todos';
 function App() {
   return (
     <>
-    <AddTodo/>
-    <Todos/>
+    <div className="container-div">
+        <AddTodo/>
+        <Todos/>
+    </div>
     </>
   );
 }
